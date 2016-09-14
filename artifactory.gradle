@@ -28,8 +28,8 @@ if (rootProject.plugins.hasPlugin("com.jfrog.artifactory") && getBuildProperty('
                 artifact "$project.buildDir/outputs/aar/${project.getName()}-release.aar"
                 artifact androidSourcesJar
 
-                groupId project.ext.publishingGroupId
-                version project.ext.publishingVersion + (publishRelease ? "" : "-SNAPSHOT")
+                groupId project.group
+                version project.version + (publishRelease ? "" : "-SNAPSHOT")
                 artifactId project.getName()
 
                 //Add dependencies from android project configurations

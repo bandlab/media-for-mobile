@@ -21,8 +21,8 @@ if (rootProject.plugins.hasPlugin("com.jfrog.artifactory") && getBuildProperty('
         publications {
             mavenJava(MavenPublication) {
                 from components.java
-                groupId project.ext.publishingGroupId
-                version project.ext.publishingVersion + (publishRelease ? "" : "-SNAPSHOT")
+                groupId project.group
+                version project.version + (publishRelease ? "" : "-SNAPSHOT")
                 artifactId project.getName()
             }
         }

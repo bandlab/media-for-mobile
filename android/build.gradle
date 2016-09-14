@@ -1,18 +1,19 @@
 apply plugin: 'com.android.library'
 
-project.ext.publishingGroupId = 'com.bandlab.m4m'
-project.ext.publishingVersion = '1.0.4'
+group 'com.bandlab.m4m'
+version '1.0.4'
+
 apply from: '../artifactory.gradle'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
-        versionName project.ext.publishingVersion
+        versionName version
     }
 
     buildTypes {
@@ -22,7 +23,7 @@ android {
 }
 
 dependencies {
-//    compile project(':domain')
-    compile "com.bandlab.m4m:domain:$project.ext.publishingVersion"
+    //compile project(':domain')
+    compile "com.bandlab.m4m:domain:$project.version"
     testCompile 'junit:junit:4.12'
 }
