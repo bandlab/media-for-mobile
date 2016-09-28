@@ -22,8 +22,8 @@ android {
 }
 
 dependencies {
-    compile "com.bandlab.m4m:domain:$project.ext.publishingVersion"
-    compile "com.bandlab.m4m:android:$project.ext.publishingVersion"
+    compile "com.bandlab.m4m:domain:$project.version"
+    compile "com.bandlab.m4m:android:$project.version"
 //    compile project(':domain')
 //    compile project(':android')
 }
